@@ -1,29 +1,30 @@
-$ÆÄÀÏ ¸¸µé±â
-¸í·É¾î·Î ¼­¹ö ÄÄÇ»ÅÍ¸¦ °ü¸®ÇÒ ¶§ ÆÄÀÏÀ» ½Å¼ÓÇÏ°Ô ¸¸µé·Á°í ÇÑ´Ù. ±×·¯±â À§ÇØ¼­´Â ´ÙÀ½°ú °°Àº ¹æ¹ýÀ» »ç¿ëÇÏ¸é ÁÁ´Ù.
-1. cmd.exe¿¡¼­´Â ´Ü¼øÇÏ°Ô text ÆÄÀÏÀ» »ý¼ºÇÏ¸é¼­ ³»¿ëµµ ÀÔ·ÂÇÏ±â
-C:\./ copy con mydoc.txt ¡æ "¿øÇÏ´Â ¹®Àå ÀÔ·Â" ¡æ ctrl+c¸¦ ´­·¯ Á¾·á
+$íŒŒì¼ ë§Œë“¤ê¸°
+ëª…ë ¹ì–´ë¡œ ì„œë²„ ì»´í“¨í„°ë¥¼ ê´€ë¦¬í•  ë•Œ íŒŒì¼ì„ ì‹ ì†í•˜ê²Œ ë§Œë“¤ë ¤ê³  í•œë‹¤. ê·¸ëŸ¬ê¸° ìœ„í•´ì„œëŠ” ë‹¤ìŒê³¼ ê°™ì€ ë°©ë²•ì„ ì‚¬ìš©í•˜ë©´ ì¢‹ë‹¤.
+1. cmd.exeì—ì„œëŠ” ë‹¨ìˆœí•˜ê²Œ text íŒŒì¼ì„ ìƒì„±í•˜ë©´ì„œ ë‚´ìš©ë„ ìž…ë ¥í•˜ê¸°
+C:\./ copy con mydoc.txt â†’ "ì›í•˜ëŠ” ë¬¸ìž¥ ìž…ë ¥" â†’ ctrl+cë¥¼ ëˆŒëŸ¬ ì¢…ë£Œ
 
-2. cmd.exe³ª powershell.exe¿¡¼­ ¿øÇÏ´Â È®ÀåÀÚ¸¦ °¡Áø ÆÄÀÏ(.avi, .mp3, .txt)¸¸ »ý¼ºÇÏ°í ³»¿ëÀº ÀÔ·ÂÇÏÁö ¾Ê±â
-fsutil file createnew mymovie.avi 102400000(¡æÆÄÀÏ »çÀÌÁî)
-** fsutil.exe´Â Å×½ºÆ®¸¦ À§ÇØ ´ë¿ë·®ÀÇ ÆÄÀÏÀ» »ý¼ºÇÒ ¼ö ÀÖ´Ù´Â ÀåÁ¡ÀÌ ÀÖ´Ù.
+2. cmd.exeë‚˜ powershell.exeì—ì„œ ì›í•˜ëŠ” í™•ìž¥ìžë¥¼ ê°€ì§„ íŒŒì¼(.avi, .mp3, .txt)ë§Œ ìƒì„±í•˜ê³  ë‚´ìš©ì€ ìž…ë ¥í•˜ì§€ ì•Šê¸°
+fsutil file createnew mymovie.avi 102400000(â†’íŒŒì¼ ì‚¬ì´ì¦ˆ)
+** fsutil.exeëŠ” í…ŒìŠ¤íŠ¸ë¥¼ ìœ„í•´ ëŒ€ìš©ëŸ‰ì˜ íŒŒì¼ì„ ìƒì„±í•  ìˆ˜ ìžˆë‹¤ëŠ” ìž¥ì ì´ ìžˆë‹¤.
 
-3. powershell.exe¿¡¼­ text ÆÄÀÏÀ» »ý¼ºÇÏ¸é¼­ ³»¿ëµµ ÀÔ·ÂÇÏ±â
-New-Item -Path c:\demo\mydoc1.txt -ItemType file -Value "¿øÇÏ´Â ¹®Àå ÀÔ·Â"
-New-Item -Path c:\demo -Name mydoc2.txt -ItemType file -Value "¿øÇÏ´Â ¹®Àå ÀÔ·Â"
+3. powershell.exeì—ì„œ text íŒŒì¼ì„ ìƒì„±í•˜ë©´ì„œ ë‚´ìš©ë„ ìž…ë ¥í•˜ê¸°
+New-Item -Path c:\demo\mydoc1.txt -ItemType file -Value "ì›í•˜ëŠ” ë¬¸ìž¥ ìž…ë ¥"
+New-Item -Path c:\demo -Name mydoc2.txt -ItemType file -Value "ì›í•˜ëŠ” ë¬¸ìž¥ ìž…ë ¥"
 New-Item -Path c:\demo -Name mydoc3.txt -ItemType file
 New-Item -Path c:\demo -Name myfolder1 -ItemType directory
-** New-ItemÀ» »ç¿ëÇÏ¸é directory·Î »ý¼ºÇÏ°í, Registryµîµµ »ý¼ºÇÒ ¼ö ÀÖ´Ù. Æ¯È÷ µÚ¿¡ -value¸¦ »ç¿ëÇÏÁö ¾ÊÀ¸¸é¼­ ¹Ýº¹¹®À» »ç¿ëÇÏ¸é ÇÑ²¨¹ø¿¡ ¼ö½Ê°³ÀÇ ÆÄÀÏµµ »ý¼ºÇÒ ¼ö ÀÖ´Ù. 
+** New-Itemì„ ì‚¬ìš©í•˜ë©´ directoryë¡œ ìƒì„±í•˜ê³ , Registryë“±ë„ ìƒì„±í•  ìˆ˜ ìžˆë‹¤. íŠ¹ížˆ ë’¤ì— -valueë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šìœ¼ë©´ì„œ ë°˜ë³µë¬¸ì„ ì‚¬ìš©í•˜ë©´ í•œêº¼ë²ˆì— ìˆ˜ì‹­ê°œì˜ íŒŒì¼ë„ ìƒì„±í•  ìˆ˜ ìžˆë‹¤. 
 
-$ ÆÄÀÏ ¼öÁ¤ÇÏ±â 
-C:\./ >notepad [ÆÄÀÏ¸í.È®ÀåÀÚ]
-À©µµ¿ìÁîÀÇ notepad¸¦ »ç¿ëÇØ ÇØ´ç ÆÄÀÏÀ» ÆíÁýÇÒ ¼ö ÀÖ´Ù. 
+$ íŒŒì¼ ìˆ˜ì •í•˜ê¸° 
+C:\./ >notepad [íŒŒì¼ëª….í™•ìž¥ìž]
+ìœˆë„ìš°ì¦ˆì˜ notepadë¥¼ ì‚¬ìš©í•´ í•´ë‹¹ íŒŒì¼ì„ íŽ¸ì§‘í•  ìˆ˜ ìžˆë‹¤. 
 
-$ ÆÄÀÏ ÀÌµ¿ÇÏ±â
-C:\./ >move [ÆÄÀÏ¸í.È®ÀåÀÚ] [µð·ºÅÍ¸® À§Ä¡]
+$ íŒŒì¼ ì´ë™í•˜ê¸°
+C:\./ >move [íŒŒì¼ëª….í™•ìž¥ìž] [ë””ë ‰í„°ë¦¬ ìœ„ì¹˜]
 
-$ ¸í·É ÇÁ·ÒÇÁÆ® Cµå¶óÀÌºê¿¡¼­ Dµå¶óÀÌºê·Î ÀÌµ¿ÇÏ±â
-C:\>D: (cd·Î´Â ºÒ°¡´ÉÇÏ´Ù)
+$ ëª…ë ¹ í”„ë¡¬í”„íŠ¸ Cë“œë¼ì´ë¸Œì—ì„œ Dë“œë¼ì´ë¸Œë¡œ ì´ë™í•˜ê¸°
+C:\>D: (cdë¡œëŠ” ë¶ˆê°€ëŠ¥í•˜ë‹¤)
 
-$ ¸í·É ÇÁ·ÒÇÁÆ® Cµå¶óÀÌºê¿¡¼­ Dµå¶óÀÌºê·Î ÀÌµ¿ÇÏ±â
-D:\> C: (cd·Î´Â ºÒ°¡´ÉÇÏ´Ù)
+$ ëª…ë ¹ í”„ë¡¬í”„íŠ¸ Cë“œë¼ì´ë¸Œì—ì„œ Dë“œë¼ì´ë¸Œë¡œ ì´ë™í•˜ê¸°
+D:\> C: (cdë¡œëŠ” ë¶ˆê°€ëŠ¥í•˜ë‹¤)
 
+ìˆ˜ì •í•œë²ˆ í•´ë´¤ë‹¤
